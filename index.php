@@ -1,52 +1,95 @@
 <?php
-// $name = " james adam ";
-// echo strlen($name);
-// echo "<br>";
-// $str = "    james camerron    ";
-// echo strlen($str), "<br>";
-// $trimed =  trim($str);
-// echo strlen($trimed), "<br>";
 
-// $p1 = '12345678';
-// $p2 = '12345678';
-// if (strcmp($p1, $p2) != 0) {
-//     echo "password don't match";
-// } else {
-//     echo "password match";
+// function sum($num)
+// {
+//     return array_sum($num);
 // }
-// echo "<br>";
-// $web = 'Dfas@sd.coM';
-// echo strtolower($web);
-// echo "<br>";
-// echo strtoupper($web);
-// echo "<br>";
-$mystr = "welcome to new york";
-echo substr($mystr, 0, 7);
-echo "<br>";
-// string to Array
-$email = "james@bb.com.mm.ygn";
-$arr = explode('.', $email);
-print_r($arr);
-echo "<br>";
-$str = "ds dsif ifds fdsf dsf sdf ds";
-$ac = explode(' ', $str);
-print_r($ac);
-echo "<br>";
-$url = "https://mdbootstrap.com/docs/standard/forms/input-fields/";
-$url_res = explode('/', $url);
-print_r($url_res);
-echo "<br>";
-// array to String
-$arr = ['a1', 'b1', 'c1', 'd1'];
-$my_arr = implode(',', $arr);
-echo $my_arr;
+// echo sum([22, 33, 44, 5, 66, 30]), "<br>";
+// echo sum([22, 333, 464, 58, 606, 30]), "<br>";
+// echo sum([2266, 3333, 44, 555, 676, 30]), "<br>";
+
+
+// function hello()
+// {
+//     echo "hello";
+//     return "helo";
+// }
+// hello();
+
+// function add($a, $b)
+// {
+//     return $a + $b;
+// }
+// try {
+//     echo add(20);
+// } catch (\Throwable $err) {
+//     print_r($err);
+// } finally {
+
+//     echo "<br>";
+//     echo add(20, 30);
+//     echo "<br>";
+//     echo add(20, 30, 100);
+//     echo "<br>";
+// }
+// defult parameter
+// function show($a = 0, $b = 20)
+// {
+//     return $a + $b;
+// };
+// echo show() . "<br>";
+// echo show(100), "<br>";
+// echo show(100, -300), "<br>";
+
+function spread($a, ...$b)
+{
+    echo $a . "<br>";
+    // print_r($b);
+    foreach ($b as $key => $value) {
+        echo "the value is =>", $value . "<br>";
+    }
+};
+// echo spread(1000, 'qq', 'e', 'rrr', 't', 't', 22, 22, 55);
+
+function arr()
+{
+    $res = func_get_args();
+    foreach ($res as $key => $value) {
+        echo "the name is =>", $value . "<br>";
+    }
+}
+// echo arr("rose", "bobo", "mgmg");
 echo "<br>";
 
-$str = "hello mm";
-$str2 = "World hello mm";
-echo ucfirst($str) . "<br>";
-echo lcfirst($str2) . "<br>";
-echo "<br>";
-$mail = "bobo@ggmail.commm";
-echo str_replace("ggmail", "gmail", $mail) . "<br>";
-echo str_replace("commm", "com", $mail) . "<br>";
+
+
+
+// $age = 30;
+// function getage($a)
+// {
+//     $a = 20;
+//     echo "inside fun =>", $a, "<br>";
+// }
+// getage($age);
+// echo "outside ", $age;
+
+// // refrence operator(&)
+// $age = 30;
+// function age(&$a)
+// {
+//     $a = 45;
+//     echo "inside fun =>", $a, "<br>";
+// }
+// age($age);
+// echo "outside ", $age;
+
+
+$hobby1 = "football";
+$hobby2 = "swimming";
+define("hobby3", "reading"); //global variable
+function hobby()
+{
+    global $hobby1, $hobby2;
+    echo "my hobby1 is $hobby1 and $hobby2 &&" . hobby3;
+}
+hobby();
