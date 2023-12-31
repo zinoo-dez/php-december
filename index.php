@@ -84,12 +84,56 @@ echo "<br>";
 // echo "outside ", $age;
 
 
-$hobby1 = "football";
-$hobby2 = "swimming";
-define("hobby3", "reading"); //global variable
-function hobby()
+// $hobby1 = "football";
+// $hobby2 = "swimming";
+// define("hobby3", "reading"); //global variable
+// function hobby()
+// {
+//     global $hobby1, $hobby2;
+//     echo "my hobby1 is $hobby1 and $hobby2 &&" . hobby3;
+// }
+// hobby();
+
+// function two($a)
+// {
+//     echo "similar js and $a";
+// }
+// $pp = "two";
+// // echo $pp;
+// $pp("php");
+
+// $numbers = [1, 2, 3, 4, 5, 6];
+// function multi($a)
+// {
+//     return $a * 3;
+// }
+// $res = array_map("multi", $numbers);
+// print_r($res);
+
+// function expression
+// $add = function ($a, $b) {
+//     echo $a +  $b;
+// };
+// $add(100, 200);
+
+
+// $myname = "rose";
+// $callme = function () use ($myname) {
+//     echo "my name is $myname";
+// };
+// $callme();
+// // arrow function (php >= 7.4 )
+// $ar = fn ($aa) => $aa * 5;
+// echo $ar(3);
+
+// $one = 2;
+// $call = fn ($two) => $one * $two; #no need global or use()
+// $call(10);
+
+function myProfile($name, $phone, $email)
 {
-    global $hobby1, $hobby2;
-    echo "my hobby1 is $hobby1 and $hobby2 &&" . hobby3;
-}
-hobby();
+    echo "my name is $name and phone $phone and email is $email <br>";
+};
+myProfile("james", "091234567",  "abcd@bb.com");
+myProfile("091234567", "james", "abcd@bb.com");
+myProfile(phone: "09345678", email: "fghjk@mm.com", name: "koko");
